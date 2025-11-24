@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+
+    <body>
+
+        <%- include ('partials/nav.ejs') %>
+            <main>
+                <h2>Planet Neptune</h2>
+                <img src="<%= planetNeptune.image %>">
+
+                <h2>Description</h2>
+                <p>
+                    <%= planetNeptune.description %>
+                </p>
+
+                <h3>Planet Info</h3>
+                <table>
+                    <tr>
+                        <td>Distance from Sun</td>
+                        <td>
+                            <%= planetNeptune.distanceFromSun %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Radius</td>
+                        <td>
+                            <%= planetNeptune.radius %> miles
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number of Moons</td>
+                        <td>
+                            <%= planetNeptune.moons %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Year Length</td>
+                        <td>
+                            <%= planetNeptune.yearLength %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>One Earth Day</td>
+                        <td>
+                            <%= planetNeptune.oneEarthDay %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>More Info</td>
+                        <td><a href="<%= planetNeptune.websiteLink %>">NASA Website</a></td>
+                    </tr>
+                </table>
+            </main>
+            <%- include ('partials/footer.ejs') %>
+    </body>
+
+</html>

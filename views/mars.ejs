@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+
+    <body>
+
+        <%- include ('partials/nav.ejs') %>
+            <main>
+                <h2>Planet Mars</h2>
+                <img src="<%= planetMars.image %>">
+
+                <h2>Description</h2>
+                <p>
+                    <%= planetMars.description %>
+                </p>
+
+                <h3>Planet Info</h3>
+                <table>
+                    <tr>
+                        <td>Distance from Sun</td>
+                        <td>
+                            <%= planetMars.distanceFromSun %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Radius</td>
+                        <td>
+                            <%= planetMars.radius %> miles
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number of Moons</td>
+                        <td>
+                            <%= planetMars.moons %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Year Length</td>
+                        <td>
+                            <%= planetMars.yearLength %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>One Earth Day</td>
+                        <td>
+                            <%= planetMars.oneEarthDay %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>More Info</td>
+                        <td><a href="<%= planetMars.websiteLink %>">NASA Website</a></td>
+                    </tr>
+                </table>
+
+            </main>
+
+            <%- include ('partials/footer.ejs') %>
+    </body>
+
+</html>

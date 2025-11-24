@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+
+    <body>
+
+        <%- include ('partials/nav.ejs') %>
+            <main>
+                <h2>Planet Venus</h2>
+                <img src="<%= planetVenus.image %>">
+
+                <h2>Description</h2>
+                <p>
+                    <%= planetVenus.description %>
+                </p>
+
+                <h3>Planet Info</h3>
+                <table>
+                    <tr>
+                        <td>Distance from Sun</td>
+                        <td>
+                            <%= planetVenus.distanceFromSun %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Radius</td>
+                        <td>
+                            <%= planetVenus.radius %> miles
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number of Moons</td>
+                        <td>
+                            <%= planetVenus.moons %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Year Length</td>
+                        <td>
+                            <%= planetVenus.yearLength %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>One Earth Day</td>
+                        <td>
+                            <%= planetVenus.oneEarthDay %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>More Info</td>
+                        <td><a href="<%= planetVenus.websiteLink %>">NASA Website</a></td>
+                    </tr>
+                </table>
+            </main>
+            <%- include ('partials/footer.ejs') %>
+    </body>
+
+</html>
