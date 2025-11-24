@@ -59,6 +59,8 @@ app.get('/earth', (req, res) => {
 
 app.get('/mars', (req, res) => {
     let planetMars = planets.getMars();
+    // need to manually change url because of the way Render builds from packages
+    planetMars.image = `https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png/960px-Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png`;
     res.render('mars', { planetMars })
 });
 
@@ -74,6 +76,8 @@ app.get('/venus', (req, res) => {
 
 app.get('/jupiter', (req, res) => {
     let planetJupiter = planets.getJupiter();
+    // need to manually change url because of the way Render builds from packages
+    planetJupiter.image = `https://science.nasa.gov/wp-content/uploads/2024/03/jupiter-marble-pia22946-16x9-1.jpg`;
     res.render('jupiter', { planetJupiter })
 });
 
